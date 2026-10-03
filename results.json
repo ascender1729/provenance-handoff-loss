@@ -1,0 +1,1999 @@
+{
+  "meta": {
+    "generated": "2026-08-28 17:22:21",
+    "region": "us-east-1",
+    "families": {
+      "anthropic_haiku45": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "meta_llama33_70b": "us.meta.llama3-3-70b-instruct-v1:0",
+      "amazon_nova_pro": "us.amazon.nova-pro-v1:0",
+      "mistral_pixtral_lg": "us.mistral.pixtral-large-2502-v1:0"
+    },
+    "judge_model": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "arms": [
+      "control",
+      "clause"
+    ],
+    "depths": [
+      1,
+      3,
+      5
+    ],
+    "items_per_cell": 20,
+    "temperature": 0.7,
+    "max_tokens": 600,
+    "n_chains_scored": 480,
+    "n_judged": 480,
+    "prog_judge_agreement": 0.9979166666666667,
+    "scoring_note": "Programmatic rule is strict: name counted only on surname or full-name string match; identifier counted on normalised variants of the true employee ID. LLM judge (Claude Sonnet 4.5) additionally credits first-name-only mentions and flags fabricated principals. Both columns reported."
+  },
+  "pooled_arm_by_depth": {
+    "control|d1": {
+      "arm": "control",
+      "depth": 1,
+      "n": 80,
+      "prog_FULL": 31,
+      "prog_PARTIAL": 6,
+      "prog_LOST": 43,
+      "judge_FULL": 31,
+      "judge_PARTIAL": 6,
+      "judge_LOST": 43,
+      "fabricated": 0,
+      "prog_full_rate": 0.3875,
+      "prog_full_ci95": [
+        0.28824565123192303,
+        0.49706342791818736
+      ],
+      "judge_full_rate": 0.3875,
+      "judge_full_ci95": [
+        0.28824565123192303,
+        0.49706342791818736
+      ],
+      "judge_any_rate": 0.4625,
+      "judge_any_ci95": [
+        0.35747993560471514,
+        0.5709564241119883
+      ],
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.04581812955604615
+      ]
+    },
+    "control|d3": {
+      "arm": "control",
+      "depth": 3,
+      "n": 80,
+      "prog_FULL": 29,
+      "prog_PARTIAL": 7,
+      "prog_LOST": 44,
+      "judge_FULL": 29,
+      "judge_PARTIAL": 7,
+      "judge_LOST": 44,
+      "fabricated": 0,
+      "prog_full_rate": 0.3625,
+      "prog_full_ci95": [
+        0.2657079306241425,
+        0.47189205500377013
+      ],
+      "judge_full_rate": 0.3625,
+      "judge_full_ci95": [
+        0.2657079306241425,
+        0.47189205500377013
+      ],
+      "judge_any_rate": 0.45,
+      "judge_any_ci95": [
+        0.34577689182427673,
+        0.558804921131328
+      ],
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.04581812955604615
+      ]
+    },
+    "control|d5": {
+      "arm": "control",
+      "depth": 5,
+      "n": 80,
+      "prog_FULL": 26,
+      "prog_PARTIAL": 7,
+      "prog_LOST": 47,
+      "judge_FULL": 26,
+      "judge_PARTIAL": 7,
+      "judge_LOST": 47,
+      "fabricated": 0,
+      "prog_full_rate": 0.325,
+      "prog_full_ci95": [
+        0.2324416184245085,
+        0.4335947269201077
+      ],
+      "judge_full_rate": 0.325,
+      "judge_full_ci95": [
+        0.2324416184245085,
+        0.4335947269201077
+      ],
+      "judge_any_rate": 0.4125,
+      "judge_any_ci95": [
+        0.31105857610576776,
+        0.5219595965665402
+      ],
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.04581812955604615
+      ]
+    },
+    "clause|d1": {
+      "arm": "clause",
+      "depth": 1,
+      "n": 80,
+      "prog_FULL": 80,
+      "prog_PARTIAL": 0,
+      "prog_LOST": 0,
+      "judge_FULL": 80,
+      "judge_PARTIAL": 0,
+      "judge_LOST": 0,
+      "fabricated": 1,
+      "prog_full_rate": 1.0,
+      "prog_full_ci95": [
+        0.9541818704439539,
+        1.0
+      ],
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.9541818704439539,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.9541818704439539,
+        1.0
+      ],
+      "fab_rate": 0.0125,
+      "fab_ci95": [
+        0.0022099755197255797,
+        0.06746270079741942
+      ]
+    },
+    "clause|d3": {
+      "arm": "clause",
+      "depth": 3,
+      "n": 80,
+      "prog_FULL": 80,
+      "prog_PARTIAL": 0,
+      "prog_LOST": 0,
+      "judge_FULL": 80,
+      "judge_PARTIAL": 0,
+      "judge_LOST": 0,
+      "fabricated": 0,
+      "prog_full_rate": 1.0,
+      "prog_full_ci95": [
+        0.9541818704439539,
+        1.0
+      ],
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.9541818704439539,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.9541818704439539,
+        1.0
+      ],
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.04581812955604615
+      ]
+    },
+    "clause|d5": {
+      "arm": "clause",
+      "depth": 5,
+      "n": 80,
+      "prog_FULL": 79,
+      "prog_PARTIAL": 1,
+      "prog_LOST": 0,
+      "judge_FULL": 80,
+      "judge_PARTIAL": 0,
+      "judge_LOST": 0,
+      "fabricated": 1,
+      "prog_full_rate": 0.9875,
+      "prog_full_ci95": [
+        0.9325372992025807,
+        0.9977900244802743
+      ],
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.9541818704439539,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.9541818704439539,
+        1.0
+      ],
+      "fab_rate": 0.0125,
+      "fab_ci95": [
+        0.0022099755197255797,
+        0.06746270079741942
+      ]
+    }
+  },
+  "per_hop_survival_depth5": {
+    "control|anthropic_haiku45": {
+      "arm": "control",
+      "family": "anthropic_haiku45",
+      "n": 20,
+      "hops": [
+        {
+          "hop": 1,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        },
+        {
+          "hop": 2,
+          "full": 17,
+          "name": 19,
+          "id": 17,
+          "full_rate": 0.85,
+          "full_ci95": [
+            0.6395811352026538,
+            0.9476312541159659
+          ]
+        },
+        {
+          "hop": 3,
+          "full": 16,
+          "name": 17,
+          "id": 16,
+          "full_rate": 0.8,
+          "full_ci95": [
+            0.5839825676933227,
+            0.919342337436923
+          ]
+        },
+        {
+          "hop": 4,
+          "full": 16,
+          "name": 17,
+          "id": 16,
+          "full_rate": 0.8,
+          "full_ci95": [
+            0.5839825676933227,
+            0.919342337436923
+          ]
+        },
+        {
+          "hop": 5,
+          "full": 16,
+          "name": 17,
+          "id": 16,
+          "full_rate": 0.8,
+          "full_ci95": [
+            0.5839825676933227,
+            0.919342337436923
+          ]
+        }
+      ]
+    },
+    "control|meta_llama33_70b": {
+      "arm": "control",
+      "family": "meta_llama33_70b",
+      "n": 20,
+      "hops": [
+        {
+          "hop": 1,
+          "full": 6,
+          "name": 6,
+          "id": 8,
+          "full_rate": 0.3,
+          "full_ci95": [
+            0.14547724484243416,
+            0.5189728184040686
+          ]
+        },
+        {
+          "hop": 2,
+          "full": 5,
+          "name": 5,
+          "id": 7,
+          "full_rate": 0.25,
+          "full_ci95": [
+            0.11186170138661135,
+            0.46870087767151736
+          ]
+        },
+        {
+          "hop": 3,
+          "full": 5,
+          "name": 5,
+          "id": 7,
+          "full_rate": 0.25,
+          "full_ci95": [
+            0.11186170138661135,
+            0.46870087767151736
+          ]
+        },
+        {
+          "hop": 4,
+          "full": 5,
+          "name": 5,
+          "id": 7,
+          "full_rate": 0.25,
+          "full_ci95": [
+            0.11186170138661135,
+            0.46870087767151736
+          ]
+        },
+        {
+          "hop": 5,
+          "full": 5,
+          "name": 5,
+          "id": 7,
+          "full_rate": 0.25,
+          "full_ci95": [
+            0.11186170138661135,
+            0.46870087767151736
+          ]
+        }
+      ]
+    },
+    "control|amazon_nova_pro": {
+      "arm": "control",
+      "family": "amazon_nova_pro",
+      "n": 20,
+      "hops": [
+        {
+          "hop": 1,
+          "full": 2,
+          "name": 2,
+          "id": 2,
+          "full_rate": 0.1,
+          "full_ci95": [
+            0.027866481206268754,
+            0.3010336452867371
+          ]
+        },
+        {
+          "hop": 2,
+          "full": 2,
+          "name": 2,
+          "id": 2,
+          "full_rate": 0.1,
+          "full_ci95": [
+            0.027866481206268754,
+            0.3010336452867371
+          ]
+        },
+        {
+          "hop": 3,
+          "full": 2,
+          "name": 2,
+          "id": 2,
+          "full_rate": 0.1,
+          "full_ci95": [
+            0.027866481206268754,
+            0.3010336452867371
+          ]
+        },
+        {
+          "hop": 4,
+          "full": 2,
+          "name": 2,
+          "id": 2,
+          "full_rate": 0.1,
+          "full_ci95": [
+            0.027866481206268754,
+            0.3010336452867371
+          ]
+        },
+        {
+          "hop": 5,
+          "full": 1,
+          "name": 1,
+          "id": 2,
+          "full_rate": 0.05,
+          "full_ci95": [
+            0.008881448797866152,
+            0.23613119350676542
+          ]
+        }
+      ]
+    },
+    "control|mistral_pixtral_lg": {
+      "arm": "control",
+      "family": "mistral_pixtral_lg",
+      "n": 20,
+      "hops": [
+        {
+          "hop": 1,
+          "full": 10,
+          "name": 11,
+          "id": 10,
+          "full_rate": 0.5,
+          "full_ci95": [
+            0.29929800815870233,
+            0.7007019918412977
+          ]
+        },
+        {
+          "hop": 2,
+          "full": 8,
+          "name": 9,
+          "id": 9,
+          "full_rate": 0.4,
+          "full_ci95": [
+            0.21880653234006037,
+            0.6134184992831911
+          ]
+        },
+        {
+          "hop": 3,
+          "full": 5,
+          "name": 8,
+          "id": 6,
+          "full_rate": 0.25,
+          "full_ci95": [
+            0.11186170138661135,
+            0.46870087767151736
+          ]
+        },
+        {
+          "hop": 4,
+          "full": 5,
+          "name": 8,
+          "id": 5,
+          "full_rate": 0.25,
+          "full_ci95": [
+            0.11186170138661135,
+            0.46870087767151736
+          ]
+        },
+        {
+          "hop": 5,
+          "full": 4,
+          "name": 7,
+          "id": 4,
+          "full_rate": 0.2,
+          "full_ci95": [
+            0.08065766256307698,
+            0.41601743230667737
+          ]
+        }
+      ]
+    },
+    "control|ALL": {
+      "arm": "control",
+      "family": "ALL",
+      "n": 80,
+      "hops": [
+        {
+          "hop": 1,
+          "full": 38,
+          "name": 39,
+          "id": 40,
+          "full_rate": 0.475,
+          "full_ci95": [
+            0.36924733295064954,
+            0.5830435735271527
+          ]
+        },
+        {
+          "hop": 2,
+          "full": 32,
+          "name": 35,
+          "id": 35,
+          "full_rate": 0.4,
+          "full_ci95": [
+            0.29961827593721324,
+            0.509545349973996
+          ]
+        },
+        {
+          "hop": 3,
+          "full": 28,
+          "name": 32,
+          "id": 31,
+          "full_rate": 0.35,
+          "full_ci95": [
+            0.2545455053287963,
+            0.4591999335380175
+          ]
+        },
+        {
+          "hop": 4,
+          "full": 28,
+          "name": 32,
+          "id": 30,
+          "full_rate": 0.35,
+          "full_ci95": [
+            0.2545455053287963,
+            0.4591999335380175
+          ]
+        },
+        {
+          "hop": 5,
+          "full": 26,
+          "name": 30,
+          "id": 29,
+          "full_rate": 0.325,
+          "full_ci95": [
+            0.2324416184245085,
+            0.4335947269201077
+          ]
+        }
+      ]
+    },
+    "clause|anthropic_haiku45": {
+      "arm": "clause",
+      "family": "anthropic_haiku45",
+      "n": 20,
+      "hops": [
+        {
+          "hop": 1,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        },
+        {
+          "hop": 2,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        },
+        {
+          "hop": 3,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        },
+        {
+          "hop": 4,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        },
+        {
+          "hop": 5,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        }
+      ]
+    },
+    "clause|meta_llama33_70b": {
+      "arm": "clause",
+      "family": "meta_llama33_70b",
+      "n": 20,
+      "hops": [
+        {
+          "hop": 1,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        },
+        {
+          "hop": 2,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        },
+        {
+          "hop": 3,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        },
+        {
+          "hop": 4,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        },
+        {
+          "hop": 5,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        }
+      ]
+    },
+    "clause|amazon_nova_pro": {
+      "arm": "clause",
+      "family": "amazon_nova_pro",
+      "n": 20,
+      "hops": [
+        {
+          "hop": 1,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        },
+        {
+          "hop": 2,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        },
+        {
+          "hop": 3,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        },
+        {
+          "hop": 4,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        },
+        {
+          "hop": 5,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        }
+      ]
+    },
+    "clause|mistral_pixtral_lg": {
+      "arm": "clause",
+      "family": "mistral_pixtral_lg",
+      "n": 20,
+      "hops": [
+        {
+          "hop": 1,
+          "full": 20,
+          "name": 20,
+          "id": 20,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.8388748418837426,
+            1.0
+          ]
+        },
+        {
+          "hop": 2,
+          "full": 19,
+          "name": 20,
+          "id": 19,
+          "full_rate": 0.95,
+          "full_ci95": [
+            0.7638688064932345,
+            0.9911185512021339
+          ]
+        },
+        {
+          "hop": 3,
+          "full": 19,
+          "name": 20,
+          "id": 19,
+          "full_rate": 0.95,
+          "full_ci95": [
+            0.7638688064932345,
+            0.9911185512021339
+          ]
+        },
+        {
+          "hop": 4,
+          "full": 19,
+          "name": 20,
+          "id": 19,
+          "full_rate": 0.95,
+          "full_ci95": [
+            0.7638688064932345,
+            0.9911185512021339
+          ]
+        },
+        {
+          "hop": 5,
+          "full": 19,
+          "name": 20,
+          "id": 19,
+          "full_rate": 0.95,
+          "full_ci95": [
+            0.7638688064932345,
+            0.9911185512021339
+          ]
+        }
+      ]
+    },
+    "clause|ALL": {
+      "arm": "clause",
+      "family": "ALL",
+      "n": 80,
+      "hops": [
+        {
+          "hop": 1,
+          "full": 80,
+          "name": 80,
+          "id": 80,
+          "full_rate": 1.0,
+          "full_ci95": [
+            0.9541818704439539,
+            1.0
+          ]
+        },
+        {
+          "hop": 2,
+          "full": 79,
+          "name": 80,
+          "id": 79,
+          "full_rate": 0.9875,
+          "full_ci95": [
+            0.9325372992025807,
+            0.9977900244802743
+          ]
+        },
+        {
+          "hop": 3,
+          "full": 79,
+          "name": 80,
+          "id": 79,
+          "full_rate": 0.9875,
+          "full_ci95": [
+            0.9325372992025807,
+            0.9977900244802743
+          ]
+        },
+        {
+          "hop": 4,
+          "full": 79,
+          "name": 80,
+          "id": 79,
+          "full_rate": 0.9875,
+          "full_ci95": [
+            0.9325372992025807,
+            0.9977900244802743
+          ]
+        },
+        {
+          "hop": 5,
+          "full": 79,
+          "name": 80,
+          "id": 79,
+          "full_rate": 0.9875,
+          "full_ci95": [
+            0.9325372992025807,
+            0.9977900244802743
+          ]
+        }
+      ]
+    }
+  },
+  "cells": {
+    "amazon_nova_pro|clause|d1": {
+      "family": "amazon_nova_pro",
+      "arm": "clause",
+      "depth": 1,
+      "n": 20,
+      "prog": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "judge": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "fabricated": 0,
+      "prog_id_hit": 20,
+      "prog_name_hit": 20,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 1.0,
+      "prog_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_any_rate": 1.0,
+      "prog_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_lost_rate": 0.0,
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_lost_rate": 0.0,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "amazon_nova_pro|clause|d3": {
+      "family": "amazon_nova_pro",
+      "arm": "clause",
+      "depth": 3,
+      "n": 20,
+      "prog": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "judge": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "fabricated": 0,
+      "prog_id_hit": 20,
+      "prog_name_hit": 20,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 1.0,
+      "prog_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_any_rate": 1.0,
+      "prog_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_lost_rate": 0.0,
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_lost_rate": 0.0,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "amazon_nova_pro|clause|d5": {
+      "family": "amazon_nova_pro",
+      "arm": "clause",
+      "depth": 5,
+      "n": 20,
+      "prog": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "judge": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "fabricated": 0,
+      "prog_id_hit": 20,
+      "prog_name_hit": 20,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 1.0,
+      "prog_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_any_rate": 1.0,
+      "prog_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_lost_rate": 0.0,
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_lost_rate": 0.0,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "amazon_nova_pro|control|d1": {
+      "family": "amazon_nova_pro",
+      "arm": "control",
+      "depth": 1,
+      "n": 20,
+      "prog": {
+        "FULL": 2,
+        "PARTIAL": 0,
+        "LOST": 18
+      },
+      "judge": {
+        "FULL": 2,
+        "PARTIAL": 0,
+        "LOST": 18
+      },
+      "fabricated": 0,
+      "prog_id_hit": 2,
+      "prog_name_hit": 2,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 0.1,
+      "prog_full_ci95": [
+        0.027866481206268754,
+        0.3010336452867371
+      ],
+      "prog_any_rate": 0.1,
+      "prog_any_ci95": [
+        0.027866481206268754,
+        0.3010336452867371
+      ],
+      "prog_lost_rate": 0.9,
+      "judge_full_rate": 0.1,
+      "judge_full_ci95": [
+        0.027866481206268754,
+        0.3010336452867371
+      ],
+      "judge_any_rate": 0.1,
+      "judge_any_ci95": [
+        0.027866481206268754,
+        0.3010336452867371
+      ],
+      "judge_lost_rate": 0.9,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "amazon_nova_pro|control|d3": {
+      "family": "amazon_nova_pro",
+      "arm": "control",
+      "depth": 3,
+      "n": 20,
+      "prog": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "LOST": 20
+      },
+      "judge": {
+        "FULL": 0,
+        "PARTIAL": 0,
+        "LOST": 20
+      },
+      "fabricated": 0,
+      "prog_id_hit": 0,
+      "prog_name_hit": 0,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 0.0,
+      "prog_full_ci95": [
+        0.0,
+        0.16112515811625733
+      ],
+      "prog_any_rate": 0.0,
+      "prog_any_ci95": [
+        0.0,
+        0.16112515811625733
+      ],
+      "prog_lost_rate": 1.0,
+      "judge_full_rate": 0.0,
+      "judge_full_ci95": [
+        0.0,
+        0.16112515811625733
+      ],
+      "judge_any_rate": 0.0,
+      "judge_any_ci95": [
+        0.0,
+        0.16112515811625733
+      ],
+      "judge_lost_rate": 1.0,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "amazon_nova_pro|control|d5": {
+      "family": "amazon_nova_pro",
+      "arm": "control",
+      "depth": 5,
+      "n": 20,
+      "prog": {
+        "FULL": 1,
+        "PARTIAL": 1,
+        "LOST": 18
+      },
+      "judge": {
+        "FULL": 1,
+        "PARTIAL": 1,
+        "LOST": 18
+      },
+      "fabricated": 0,
+      "prog_id_hit": 2,
+      "prog_name_hit": 1,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 0.05,
+      "prog_full_ci95": [
+        0.008881448797866152,
+        0.23613119350676542
+      ],
+      "prog_any_rate": 0.1,
+      "prog_any_ci95": [
+        0.027866481206268754,
+        0.3010336452867371
+      ],
+      "prog_lost_rate": 0.9,
+      "judge_full_rate": 0.05,
+      "judge_full_ci95": [
+        0.008881448797866152,
+        0.23613119350676542
+      ],
+      "judge_any_rate": 0.1,
+      "judge_any_ci95": [
+        0.027866481206268754,
+        0.3010336452867371
+      ],
+      "judge_lost_rate": 0.9,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "anthropic_haiku45|clause|d1": {
+      "family": "anthropic_haiku45",
+      "arm": "clause",
+      "depth": 1,
+      "n": 20,
+      "prog": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "judge": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "fabricated": 0,
+      "prog_id_hit": 20,
+      "prog_name_hit": 20,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 1.0,
+      "prog_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_any_rate": 1.0,
+      "prog_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_lost_rate": 0.0,
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_lost_rate": 0.0,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "anthropic_haiku45|clause|d3": {
+      "family": "anthropic_haiku45",
+      "arm": "clause",
+      "depth": 3,
+      "n": 20,
+      "prog": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "judge": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "fabricated": 0,
+      "prog_id_hit": 20,
+      "prog_name_hit": 20,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 1.0,
+      "prog_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_any_rate": 1.0,
+      "prog_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_lost_rate": 0.0,
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_lost_rate": 0.0,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "anthropic_haiku45|clause|d5": {
+      "family": "anthropic_haiku45",
+      "arm": "clause",
+      "depth": 5,
+      "n": 20,
+      "prog": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "judge": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "fabricated": 0,
+      "prog_id_hit": 20,
+      "prog_name_hit": 20,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 1.0,
+      "prog_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_any_rate": 1.0,
+      "prog_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_lost_rate": 0.0,
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_lost_rate": 0.0,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "anthropic_haiku45|control|d1": {
+      "family": "anthropic_haiku45",
+      "arm": "control",
+      "depth": 1,
+      "n": 20,
+      "prog": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "judge": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "fabricated": 0,
+      "prog_id_hit": 20,
+      "prog_name_hit": 20,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 1.0,
+      "prog_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_any_rate": 1.0,
+      "prog_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_lost_rate": 0.0,
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_lost_rate": 0.0,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "anthropic_haiku45|control|d3": {
+      "family": "anthropic_haiku45",
+      "arm": "control",
+      "depth": 3,
+      "n": 20,
+      "prog": {
+        "FULL": 18,
+        "PARTIAL": 2,
+        "LOST": 0
+      },
+      "judge": {
+        "FULL": 18,
+        "PARTIAL": 2,
+        "LOST": 0
+      },
+      "fabricated": 0,
+      "prog_id_hit": 19,
+      "prog_name_hit": 19,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 0.9,
+      "prog_full_ci95": [
+        0.698966354713263,
+        0.9721335187937312
+      ],
+      "prog_any_rate": 1.0,
+      "prog_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_lost_rate": 0.0,
+      "judge_full_rate": 0.9,
+      "judge_full_ci95": [
+        0.698966354713263,
+        0.9721335187937312
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_lost_rate": 0.0,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "anthropic_haiku45|control|d5": {
+      "family": "anthropic_haiku45",
+      "arm": "control",
+      "depth": 5,
+      "n": 20,
+      "prog": {
+        "FULL": 16,
+        "PARTIAL": 1,
+        "LOST": 3
+      },
+      "judge": {
+        "FULL": 16,
+        "PARTIAL": 1,
+        "LOST": 3
+      },
+      "fabricated": 0,
+      "prog_id_hit": 16,
+      "prog_name_hit": 17,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 0.8,
+      "prog_full_ci95": [
+        0.5839825676933227,
+        0.919342337436923
+      ],
+      "prog_any_rate": 0.85,
+      "prog_any_ci95": [
+        0.6395811352026538,
+        0.9476312541159659
+      ],
+      "prog_lost_rate": 0.15,
+      "judge_full_rate": 0.8,
+      "judge_full_ci95": [
+        0.5839825676933227,
+        0.919342337436923
+      ],
+      "judge_any_rate": 0.85,
+      "judge_any_ci95": [
+        0.6395811352026538,
+        0.9476312541159659
+      ],
+      "judge_lost_rate": 0.15,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "meta_llama33_70b|clause|d1": {
+      "family": "meta_llama33_70b",
+      "arm": "clause",
+      "depth": 1,
+      "n": 20,
+      "prog": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "judge": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "fabricated": 0,
+      "prog_id_hit": 20,
+      "prog_name_hit": 20,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 1.0,
+      "prog_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_any_rate": 1.0,
+      "prog_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_lost_rate": 0.0,
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_lost_rate": 0.0,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "meta_llama33_70b|clause|d3": {
+      "family": "meta_llama33_70b",
+      "arm": "clause",
+      "depth": 3,
+      "n": 20,
+      "prog": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "judge": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "fabricated": 0,
+      "prog_id_hit": 20,
+      "prog_name_hit": 20,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 1.0,
+      "prog_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_any_rate": 1.0,
+      "prog_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_lost_rate": 0.0,
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_lost_rate": 0.0,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "meta_llama33_70b|clause|d5": {
+      "family": "meta_llama33_70b",
+      "arm": "clause",
+      "depth": 5,
+      "n": 20,
+      "prog": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "judge": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "fabricated": 0,
+      "prog_id_hit": 20,
+      "prog_name_hit": 20,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 1.0,
+      "prog_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_any_rate": 1.0,
+      "prog_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_lost_rate": 0.0,
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_lost_rate": 0.0,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "meta_llama33_70b|control|d1": {
+      "family": "meta_llama33_70b",
+      "arm": "control",
+      "depth": 1,
+      "n": 20,
+      "prog": {
+        "FULL": 1,
+        "PARTIAL": 2,
+        "LOST": 17
+      },
+      "judge": {
+        "FULL": 1,
+        "PARTIAL": 2,
+        "LOST": 17
+      },
+      "fabricated": 0,
+      "prog_id_hit": 3,
+      "prog_name_hit": 1,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 0.05,
+      "prog_full_ci95": [
+        0.008881448797866152,
+        0.23613119350676542
+      ],
+      "prog_any_rate": 0.15,
+      "prog_any_ci95": [
+        0.05236874588403395,
+        0.36041886479734614
+      ],
+      "prog_lost_rate": 0.85,
+      "judge_full_rate": 0.05,
+      "judge_full_ci95": [
+        0.008881448797866152,
+        0.23613119350676542
+      ],
+      "judge_any_rate": 0.15,
+      "judge_any_ci95": [
+        0.05236874588403395,
+        0.36041886479734614
+      ],
+      "judge_lost_rate": 0.85,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "meta_llama33_70b|control|d3": {
+      "family": "meta_llama33_70b",
+      "arm": "control",
+      "depth": 3,
+      "n": 20,
+      "prog": {
+        "FULL": 6,
+        "PARTIAL": 2,
+        "LOST": 12
+      },
+      "judge": {
+        "FULL": 6,
+        "PARTIAL": 2,
+        "LOST": 12
+      },
+      "fabricated": 0,
+      "prog_id_hit": 8,
+      "prog_name_hit": 6,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 0.3,
+      "prog_full_ci95": [
+        0.14547724484243416,
+        0.5189728184040686
+      ],
+      "prog_any_rate": 0.4,
+      "prog_any_ci95": [
+        0.21880653234006037,
+        0.6134184992831911
+      ],
+      "prog_lost_rate": 0.6,
+      "judge_full_rate": 0.3,
+      "judge_full_ci95": [
+        0.14547724484243416,
+        0.5189728184040686
+      ],
+      "judge_any_rate": 0.4,
+      "judge_any_ci95": [
+        0.21880653234006037,
+        0.6134184992831911
+      ],
+      "judge_lost_rate": 0.6,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "meta_llama33_70b|control|d5": {
+      "family": "meta_llama33_70b",
+      "arm": "control",
+      "depth": 5,
+      "n": 20,
+      "prog": {
+        "FULL": 5,
+        "PARTIAL": 2,
+        "LOST": 13
+      },
+      "judge": {
+        "FULL": 5,
+        "PARTIAL": 2,
+        "LOST": 13
+      },
+      "fabricated": 0,
+      "prog_id_hit": 7,
+      "prog_name_hit": 5,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 0.25,
+      "prog_full_ci95": [
+        0.11186170138661135,
+        0.46870087767151736
+      ],
+      "prog_any_rate": 0.35,
+      "prog_any_ci95": [
+        0.1811918240720126,
+        0.5671457233628646
+      ],
+      "prog_lost_rate": 0.65,
+      "judge_full_rate": 0.25,
+      "judge_full_ci95": [
+        0.11186170138661135,
+        0.46870087767151736
+      ],
+      "judge_any_rate": 0.35,
+      "judge_any_ci95": [
+        0.1811918240720126,
+        0.5671457233628646
+      ],
+      "judge_lost_rate": 0.65,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "mistral_pixtral_lg|clause|d1": {
+      "family": "mistral_pixtral_lg",
+      "arm": "clause",
+      "depth": 1,
+      "n": 20,
+      "prog": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "judge": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "fabricated": 1,
+      "prog_id_hit": 20,
+      "prog_name_hit": 20,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 1.0,
+      "prog_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_any_rate": 1.0,
+      "prog_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_lost_rate": 0.0,
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_lost_rate": 0.0,
+      "fab_rate": 0.05,
+      "fab_ci95": [
+        0.008881448797866152,
+        0.23613119350676542
+      ]
+    },
+    "mistral_pixtral_lg|clause|d3": {
+      "family": "mistral_pixtral_lg",
+      "arm": "clause",
+      "depth": 3,
+      "n": 20,
+      "prog": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "judge": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "fabricated": 0,
+      "prog_id_hit": 20,
+      "prog_name_hit": 20,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 1.0,
+      "prog_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_any_rate": 1.0,
+      "prog_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_lost_rate": 0.0,
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_lost_rate": 0.0,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "mistral_pixtral_lg|clause|d5": {
+      "family": "mistral_pixtral_lg",
+      "arm": "clause",
+      "depth": 5,
+      "n": 20,
+      "prog": {
+        "FULL": 19,
+        "PARTIAL": 1,
+        "LOST": 0
+      },
+      "judge": {
+        "FULL": 20,
+        "PARTIAL": 0,
+        "LOST": 0
+      },
+      "fabricated": 1,
+      "prog_id_hit": 19,
+      "prog_name_hit": 20,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 0.95,
+      "prog_full_ci95": [
+        0.7638688064932345,
+        0.9911185512021339
+      ],
+      "prog_any_rate": 1.0,
+      "prog_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "prog_lost_rate": 0.0,
+      "judge_full_rate": 1.0,
+      "judge_full_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_any_rate": 1.0,
+      "judge_any_ci95": [
+        0.8388748418837426,
+        1.0
+      ],
+      "judge_lost_rate": 0.0,
+      "fab_rate": 0.05,
+      "fab_ci95": [
+        0.008881448797866152,
+        0.23613119350676542
+      ]
+    },
+    "mistral_pixtral_lg|control|d1": {
+      "family": "mistral_pixtral_lg",
+      "arm": "control",
+      "depth": 1,
+      "n": 20,
+      "prog": {
+        "FULL": 8,
+        "PARTIAL": 4,
+        "LOST": 8
+      },
+      "judge": {
+        "FULL": 8,
+        "PARTIAL": 4,
+        "LOST": 8
+      },
+      "fabricated": 0,
+      "prog_id_hit": 9,
+      "prog_name_hit": 11,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 0.4,
+      "prog_full_ci95": [
+        0.21880653234006037,
+        0.6134184992831911
+      ],
+      "prog_any_rate": 0.6,
+      "prog_any_ci95": [
+        0.38658150071680886,
+        0.7811934676599396
+      ],
+      "prog_lost_rate": 0.4,
+      "judge_full_rate": 0.4,
+      "judge_full_ci95": [
+        0.21880653234006037,
+        0.6134184992831911
+      ],
+      "judge_any_rate": 0.6,
+      "judge_any_ci95": [
+        0.38658150071680886,
+        0.7811934676599396
+      ],
+      "judge_lost_rate": 0.4,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "mistral_pixtral_lg|control|d3": {
+      "family": "mistral_pixtral_lg",
+      "arm": "control",
+      "depth": 3,
+      "n": 20,
+      "prog": {
+        "FULL": 5,
+        "PARTIAL": 3,
+        "LOST": 12
+      },
+      "judge": {
+        "FULL": 5,
+        "PARTIAL": 3,
+        "LOST": 12
+      },
+      "fabricated": 0,
+      "prog_id_hit": 6,
+      "prog_name_hit": 7,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 0.25,
+      "prog_full_ci95": [
+        0.11186170138661135,
+        0.46870087767151736
+      ],
+      "prog_any_rate": 0.4,
+      "prog_any_ci95": [
+        0.21880653234006037,
+        0.6134184992831911
+      ],
+      "prog_lost_rate": 0.6,
+      "judge_full_rate": 0.25,
+      "judge_full_ci95": [
+        0.11186170138661135,
+        0.46870087767151736
+      ],
+      "judge_any_rate": 0.4,
+      "judge_any_ci95": [
+        0.21880653234006037,
+        0.6134184992831911
+      ],
+      "judge_lost_rate": 0.6,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    },
+    "mistral_pixtral_lg|control|d5": {
+      "family": "mistral_pixtral_lg",
+      "arm": "control",
+      "depth": 5,
+      "n": 20,
+      "prog": {
+        "FULL": 4,
+        "PARTIAL": 3,
+        "LOST": 13
+      },
+      "judge": {
+        "FULL": 4,
+        "PARTIAL": 3,
+        "LOST": 13
+      },
+      "fabricated": 0,
+      "prog_id_hit": 4,
+      "prog_name_hit": 7,
+      "first_name_only": 0,
+      "parse_fail_hops": 0,
+      "prog_full_rate": 0.2,
+      "prog_full_ci95": [
+        0.08065766256307698,
+        0.41601743230667737
+      ],
+      "prog_any_rate": 0.35,
+      "prog_any_ci95": [
+        0.1811918240720126,
+        0.5671457233628646
+      ],
+      "prog_lost_rate": 0.65,
+      "judge_full_rate": 0.2,
+      "judge_full_ci95": [
+        0.08065766256307698,
+        0.41601743230667737
+      ],
+      "judge_any_rate": 0.35,
+      "judge_any_ci95": [
+        0.1811918240720126,
+        0.5671457233628646
+      ],
+      "judge_lost_rate": 0.65,
+      "fab_rate": 0.0,
+      "fab_ci95": [
+        0.0,
+        0.16112515811625733
+      ]
+    }
+  }
+}
